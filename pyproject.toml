@@ -1,0 +1,18 @@
+[project]
+name = "average_cambridge_assessment"
+version = "0.0.1"
+authors = [
+  { name="Klaas Vogel", email="klaasvogel@hotmail.com" },
+]
+description = "Small Program to extract scores from certificate in advanced englisch pdf and calculate average score in each CEFR level"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/KlaasVogel/average_cambridge_assessment"
+"Bug Tracker" = "https://github.com/KlaasVogel/average_cambridge_assessment/issues"
