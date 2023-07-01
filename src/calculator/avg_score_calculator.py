@@ -1,4 +1,4 @@
-from pdfscraper.pdfscraper import hello
+from pdfscraper.scraper import hello
 
 def calculate():
     print("Hello,")
