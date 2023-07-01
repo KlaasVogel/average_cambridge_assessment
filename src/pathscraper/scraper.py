@@ -9,5 +9,4 @@ def load_dir(source: str) -> list[CEFR_Scores]:
         raise InvalidPathError
     query = os.path.join(source, "*.pdf")
     filelist = glob(query)
-    for file in filelist:
-        return [scores for scores in extract_cefr_scores(file) if scores]
+    return [scores for file in filelist for scores in extract_cefr_scores(file)]
