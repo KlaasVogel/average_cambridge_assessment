@@ -12,6 +12,7 @@ class CEFR_Scores:
     session: str = ""
     result: str = ""
     overall: int = 0
+    level: str = ""
     reading: int = 0
     use_of_english: int = 0
     writing: int = 0
@@ -20,7 +21,6 @@ class CEFR_Scores:
 
     def __post_init__(self, data: RawPageText):
         self.add_data(data)
-        print(self)
         
     def add_data(self, data: RawPageText):
         """for each text in list of text check if text in reference table. get attribute from ref. tabl and update attribute"""
@@ -30,6 +30,7 @@ class CEFR_Scores:
            "Session": "session",
            "Result": "result",
            "Overall Score": "overall",
+           "CEFR Level": "level",
            "Reading": "reading",
            "Use of English": "use_of_english",
            "Writing": "writing",
@@ -42,6 +43,9 @@ class CEFR_Scores:
                     #reached end of texts"
                     continue
                 value = data[idx+1]
+                if getattr(self, referencetable[text]):
+                    #attribute has already been set. (level?) -> skip
+                    continue
                 self.add_value(key = referencetable[text], value = value)
             
 
