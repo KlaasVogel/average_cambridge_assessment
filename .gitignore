@@ -1,5 +1,5 @@
 #test directory with some sample pdfs (not included)
-test/ 
+testfiles/
 
 #vscode
 .vscode
